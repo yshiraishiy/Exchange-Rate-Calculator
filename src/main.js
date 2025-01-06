@@ -29,19 +29,39 @@ function calculate(baseCurrency, targetCurrency, amount, targetInput) {
 
 // イベントリスナー
 currencyEl_one.addEventListener("change", () => {
-  calculate(currencyEl_one.value, currencyEl_two.value, amountEl_one.value, amountEl_two);
+  calculate(
+    currencyEl_one.value,
+    currencyEl_two.value,
+    amountEl_one.value,
+    amountEl_two
+  );
 });
 
 currencyEl_two.addEventListener("change", () => {
-  calculate(currencyEl_two.value, currencyEl_one.value, amountEl_two.value, amountEl_one);
+  calculate(
+    currencyEl_two.value,
+    currencyEl_one.value,
+    amountEl_two.value,
+    amountEl_one
+  );
 });
 
 amountEl_one.addEventListener("input", () => {
-  calculate(currencyEl_one.value, currencyEl_two.value, amountEl_one.value, amountEl_two);
+  calculate(
+    currencyEl_one.value,
+    currencyEl_two.value,
+    amountEl_one.value,
+    amountEl_two
+  );
 });
 
 amountEl_two.addEventListener("input", () => {
-  calculate(currencyEl_two.value, currencyEl_one.value, amountEl_two.value, amountEl_one);
+  calculate(
+    currencyEl_two.value,
+    currencyEl_one.value,
+    amountEl_two.value,
+    amountEl_one
+  );
 });
 
 swap.addEventListener("click", () => {
@@ -54,9 +74,13 @@ swap.addEventListener("click", () => {
   amountEl_one.value = amountEl_two.value;
   amountEl_two.value = tempAmount;
 
-  calculate(currencyEl_one.value, currencyEl_two.value, amountEl_one.value, amountEl_two);
+  calculate(
+    currencyEl_one.value,
+    currencyEl_two.value,
+    amountEl_one.value,
+    amountEl_two
+  );
 });
-
 
 calculate(
   currencyEl_one.value,
